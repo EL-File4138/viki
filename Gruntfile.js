@@ -60,8 +60,7 @@ module.exports = function(grunt) {
                         '@babel/preset-env',
                         {
                             "targets": {
-                                "chrome": "58",
-                                "ie": "11"
+                                "chrome": "68",
                             }
                         }
                     ]
