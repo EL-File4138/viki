@@ -123,7 +123,7 @@ class ContentWorker extends Worker {
             containerDiv.append(tocDiv);
         }
 
-        $('body').append(mainDiv);
+        $('viki-footer').before(mainDiv);
     }
 
     isMarkdown(p_name) {
