@@ -39,11 +39,11 @@ class Viki {
         let fetchTargetWorker = new FetchTargetWorker();
         registerWorker(fetchTargetWorker);
 
-        let contentWorker = new ContentWorker();
-        registerWorker(contentWorker);
-
         let footerWorker = new FooterWorker();
         registerWorker(footerWorker);
+
+        let contentWorker = new ContentWorker();
+        registerWorker(contentWorker);
 
         $(document).ready(() => {
             if (!this.initTargetFromHash()) {
