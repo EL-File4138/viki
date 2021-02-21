@@ -12,7 +12,7 @@ class FooterWorker extends Worker {
     }
 
     run() {
-        $.get(this.viki.config.footer, (p_footer))
+        $.get(this.viki.config.footer)
             .done((p_footer) => {
                 let footer = $(`<footer class="viki-footer text-muted"></footer>`);
                 let container = $(`<div class="container-fluid p-3 p-md-5"></div>`);
@@ -31,7 +31,7 @@ class FooterWorker extends Worker {
                 footer.append(container);
                 $("body").append(footer);
             })
-            .always((p_footer) => {
+            .always(() => {
                 this.viki.scheduleNext();
             });
     }
